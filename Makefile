@@ -34,3 +34,12 @@ testBoard.o: testBoard.c
 
 board.o: board.c
 	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c -o board.o board.c
+
+#
+#				Misc Commands
+#
+clean:
+	-rm *.o
+
+realclean: clean
+	-rm testBoard
