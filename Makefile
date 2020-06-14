@@ -21,6 +21,10 @@ CDEBUGFLAGS=-ggdb
 #               Main Targets
 #
 
+# Default target
+mainTarget: testDisp
+
+
 # Testing Files
 testBoard: testBoard.o board.o
 	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -o testBoard $^ $(CLIBS)
@@ -44,3 +48,4 @@ clean:
 
 realclean: clean
 	-rm testBoard
+	-rm testDisp
