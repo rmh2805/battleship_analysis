@@ -30,7 +30,7 @@ testBoard: testBoard.o board.o
 	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -o testBoard $^ $(CLIBS)
 	$(ECHO)
 
-testDisp: testDisp.o board.o
+testDisp: testDisp.o boardDisp.o board.o
 	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -o $@ $^ $(CLIBS)
 	$(ECHO)
 
