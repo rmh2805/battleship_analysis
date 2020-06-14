@@ -26,14 +26,15 @@ testBoard: testBoard.o board.o
 	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -o testBoard $^ $(CLIBS)
 	$(ECHO)
 
+testDisp: testDisp.o board.o
+	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -o $@ $^ $(CLIBS)
+	$(ECHO)
+
 #
 #				Object Files
 #
-testBoard.o: testBoard.c
-	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c -o testBoard.o testBoard.c
-
-board.o: board.c
-	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c -o board.o board.c
+%.o: %.c
+	$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c -o $@ $^
 
 #
 #				Misc Commands
